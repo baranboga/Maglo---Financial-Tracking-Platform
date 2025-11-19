@@ -9,14 +9,12 @@ import {
   type SignUpFormData,
 } from "@/lib/validations/authSchemas";
 import { authApi } from "@/lib/api/auth";
-import { useAuthStore } from "@/store/authStore";
 import Button from "@/components/ui/Button/Button";
 import Input from "@/components/ui/Input/Input";
 import vectorImage from "@/assets/images/auth/vector 11.png";
 
 const SignUpForm = () => {
   const navigate = useNavigate();
-  const login = useAuthStore((state) => state.login);
 
   const {
     register,
@@ -30,15 +28,10 @@ const SignUpForm = () => {
     mutationFn: authApi.signUp,
     onSuccess: (response) => {
       if (response.success && response.data) {
-        login(
-          response.data.user.email,
-          response.data.user.fullName,
-          response.data.accessToken
-        );
-        toast.success(response.message || "Sign up successful!");
+        toast.success(response.message || "Sign up successful! Please sign in.");
         setTimeout(() => {
-          navigate("/dashboard");
-        }, 500);
+          navigate("/sign-in");
+        }, 1000);
       } else {
         toast.error("Unexpected response format");
       }

@@ -30,14 +30,24 @@ export interface AuthResponse {
   };
 }
 
+export interface SignUpResponse {
+  success: boolean;
+  message: string;
+  data: {
+    id: string;
+    fullName: string;
+    email: string;
+  };
+}
+
 export const authApi = {
   signIn: async (data: SignInRequest): Promise<AuthResponse> => {
     const response = await apiClient.post<AuthResponse>("/users/login", data);
     return response.data;
   },
 
-  signUp: async (data: SignUpRequest): Promise<AuthResponse> => {
-    const response = await apiClient.post<AuthResponse>(
+  signUp: async (data: SignUpRequest): Promise<SignUpResponse> => {
+    const response = await apiClient.post<SignUpResponse>(
       "/users/register",
       data
     );
