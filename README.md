@@ -2,6 +2,10 @@
 
 Modern and user-friendly financial dashboard application. Manage your income-expense tracking, wallet management, and financial analytics all in one platform.
 
+## 🌐 Live Demo
+
+**👉 [View Live Demo](https://loquacious-puffpuff-207002.netlify.app/dashboard)**
+
 ---
 
 ## 📸 Screenshots
@@ -142,6 +146,7 @@ npm run preview
 ```
 maglo/
 ├── public/                    # Static assets
+│   └── _redirects            # Netlify routing configuration
 ├── src/
 │   ├── assets/               # Images, icons
 │   │   └── images/
@@ -264,6 +269,44 @@ server: {
 - Prettier formatting
 - Modular component structure
 - Clean code principles
+
+---
+
+## 🚀 Deployment
+
+### Netlify Configuration
+
+This project uses a `public/_redirects` file to handle client-side routing on Netlify.
+
+#### Why `_redirects` is needed?
+
+When deploying a Single Page Application (SPA) like React Router to Netlify, refreshing a route (e.g., `/dashboard` or `/profile`) causes a 404 error. This happens because:
+
+1. **Server-side routing**: When you refresh `/dashboard`, Netlify's server looks for a physical `/dashboard` file or folder, which doesn't exist in a SPA.
+2. **Client-side routing**: React Router handles routing on the client side, but the server needs to know to serve `index.html` for all routes.
+
+#### Solution: `_redirects` file
+
+The `public/_redirects` file contains:
+
+```
+/* /index.html 200
+```
+
+This rule tells Netlify:
+
+- `/*` - Match all routes
+- `/index.html` - Serve the `index.html` file
+- `200` - Return HTTP 200 (success) instead of redirect (important for SEO)
+
+#### How it works:
+
+1. Vite automatically copies files from `public/` to `dist/` during build
+2. Netlify reads `_redirects` from the `dist/` folder during deployment
+3. All routes are served as `index.html` with a 200 status
+4. React Router takes over and renders the correct component
+
+This ensures that all routes work correctly, even when users refresh the page or access routes directly via URL.
 
 ---
 
