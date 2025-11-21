@@ -76,7 +76,7 @@ const Dashboard = () => {
             <div className="space-y-6">
               {/* Title Skeleton */}
               <div className="h-8 shimmer rounded w-48"></div>
-              
+
               {/* Summary Cards Skeleton */}
               <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
                 <div className="lg:col-span-3 grid grid-cols-1 lg:grid-cols-3 gap-4">
@@ -113,23 +113,23 @@ const Dashboard = () => {
       <div className="flex-1 flex flex-col overflow-hidden">
         <Header onMenuClick={() => setSidebarOpen(true)} />
         <div className="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
-          <div className="grid grid-cols-1 lg:grid-cols-6 gap-4">
-            <div className="lg:col-span-4 space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-6 gap-4">
+            <div className="md:col-span-3 lg:col-span-4 space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div className="bg-gray-800 rounded-xl p-3.5 text-white sm:col-span-2 lg:col-span-1 h-[85px]">
-                  <div className="flex items-center gap-3 h-full">
-                    <div className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="bg-gray-800 rounded-xl p-3 md:p-3.5 text-white sm:col-span-2 lg:col-span-1 h-[85px]">
+                  <div className="flex items-center gap-2 md:gap-3 h-full">
+                    <div className="w-8 h-8 md:w-10 md:h-10 bg-gray-700 rounded-full flex items-center justify-center flex-shrink-0">
                       <img
                         src={walletYellow}
                         alt="Wallet"
-                        className="w-5 h-5"
+                        className="w-4 h-4 md:w-5 md:h-5"
                       />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="text-gray-400 text-xs mb-1">
                         Total balance
                       </div>
-                      <div className="text-xl font-bold leading-tight">
+                      <div className="text-base md:text-lg lg:text-xl font-bold leading-tight">
                         {summary?.totalBalance?.amount
                           ? formatCurrency(
                               summary.totalBalance.amount,
@@ -141,16 +141,20 @@ const Dashboard = () => {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-xl p-3.5 border border-gray-200 h-[85px]">
-                  <div className="flex items-center gap-3 h-full">
-                    <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <img src={walletBlack} alt="Wallet" className="w-5 h-5" />
+                <div className="bg-white rounded-xl p-3 md:p-3.5 border border-gray-200 h-[85px]">
+                  <div className="flex items-center gap-2 md:gap-3 h-full">
+                    <div className="w-8 h-8 md:w-10 md:h-10 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <img
+                        src={walletBlack}
+                        alt="Wallet"
+                        className="w-4 h-4 md:w-5 md:h-5"
+                      />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="text-gray-500 text-xs mb-1">
                         Total spending
                       </div>
-                      <div className="text-xl font-bold text-gray-900 leading-tight">
+                      <div className="text-base md:text-lg lg:text-xl font-bold text-gray-900 leading-tight">
                         {summary?.totalExpense?.amount
                           ? formatCurrency(
                               summary.totalExpense.amount,
@@ -162,16 +166,20 @@ const Dashboard = () => {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-xl p-3.5 border border-gray-200 h-[85px]">
-                  <div className="flex items-center gap-3 h-full">
-                    <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <img src={walletAdd} alt="Wallet" className="w-5 h-5" />
+                <div className="bg-white rounded-xl p-3 md:p-3.5 border border-gray-200 h-[85px]">
+                  <div className="flex items-center gap-2 md:gap-3 h-full">
+                    <div className="w-8 h-8 md:w-10 md:h-10 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <img
+                        src={walletAdd}
+                        alt="Wallet"
+                        className="w-4 h-4 md:w-5 md:h-5"
+                      />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="text-gray-500 text-xs mb-1">
                         Total saved
                       </div>
-                      <div className="text-xl font-bold text-gray-900 leading-tight">
+                      <div className="text-base md:text-lg lg:text-xl font-bold text-gray-900 leading-tight">
                         {summary?.totalSavings?.amount
                           ? formatCurrency(
                               summary.totalSavings.amount,
@@ -218,63 +226,67 @@ const Dashboard = () => {
                     <span className="text-sm text-gray-600">Net</span>
                   </div>
                 </div>
-                <ResponsiveContainer width="100%" height={300}>
-                  <LineChart data={chartData}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-                    <XAxis
-                      dataKey="month"
-                      tick={{ fill: "#6b7280", fontSize: 12 }}
-                      tickLine={{ stroke: "#e5e7eb" }}
-                    />
-                    <YAxis
-                      tick={{ fill: "#6b7280", fontSize: 12 }}
-                      tickLine={{ stroke: "#e5e7eb" }}
-                      tickFormatter={(value) => `${(value / 1000).toFixed(0)}k`}
-                    />
-                    <Tooltip
-                      formatter={(value: number) =>
-                        `₺${value.toLocaleString()}`
-                      }
-                      contentStyle={{
-                        backgroundColor: "white",
-                        border: "1px solid #e5e7eb",
-                        borderRadius: "8px",
-                        padding: "8px 12px",
-                      }}
-                    />
-                    <Legend
-                      wrapperStyle={{ paddingTop: "20px" }}
-                      iconType="circle"
-                    />
-                    <Line
-                      type="monotone"
-                      dataKey="income"
-                      name="Income"
-                      stroke="#29A073"
-                      strokeWidth={2}
-                      dot={{ fill: "#29A073", r: 4 }}
-                      activeDot={{ r: 6 }}
-                    />
-                    <Line
-                      type="monotone"
-                      dataKey="expense"
-                      name="Expense"
-                      stroke="#C8EE44"
-                      strokeWidth={2}
-                      dot={{ fill: "#C8EE44", r: 4 }}
-                      activeDot={{ r: 6 }}
-                    />
-                    <Line
-                      type="monotone"
-                      dataKey="net"
-                      name="Net"
-                      stroke="#FF9F40"
-                      strokeWidth={2}
-                      dot={{ fill: "#FF9F40", r: 4 }}
-                      activeDot={{ r: 6 }}
-                    />
-                  </LineChart>
-                </ResponsiveContainer>
+                <div className="h-[280px] md:h-[300px]">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <LineChart data={chartData}>
+                      <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+                      <XAxis
+                        dataKey="month"
+                        tick={{ fill: "#6b7280", fontSize: 12 }}
+                        tickLine={{ stroke: "#e5e7eb" }}
+                      />
+                      <YAxis
+                        tick={{ fill: "#6b7280", fontSize: 12 }}
+                        tickLine={{ stroke: "#e5e7eb" }}
+                        tickFormatter={(value) =>
+                          `${(value / 1000).toFixed(0)}k`
+                        }
+                      />
+                      <Tooltip
+                        formatter={(value: number) =>
+                          `₺${value.toLocaleString()}`
+                        }
+                        contentStyle={{
+                          backgroundColor: "white",
+                          border: "1px solid #e5e7eb",
+                          borderRadius: "8px",
+                          padding: "8px 12px",
+                        }}
+                      />
+                      <Legend
+                        wrapperStyle={{ paddingTop: "20px" }}
+                        iconType="circle"
+                      />
+                      <Line
+                        type="monotone"
+                        dataKey="income"
+                        name="Income"
+                        stroke="#29A073"
+                        strokeWidth={2}
+                        dot={{ fill: "#29A073", r: 4 }}
+                        activeDot={{ r: 6 }}
+                      />
+                      <Line
+                        type="monotone"
+                        dataKey="expense"
+                        name="Expense"
+                        stroke="#C8EE44"
+                        strokeWidth={2}
+                        dot={{ fill: "#C8EE44", r: 4 }}
+                        activeDot={{ r: 6 }}
+                      />
+                      <Line
+                        type="monotone"
+                        dataKey="net"
+                        name="Net"
+                        stroke="#FF9F40"
+                        strokeWidth={2}
+                        dot={{ fill: "#FF9F40", r: 4 }}
+                        activeDot={{ r: 6 }}
+                      />
+                    </LineChart>
+                  </ResponsiveContainer>
+                </div>
               </div>
 
               <div className="bg-white rounded-xl p-4 md:p-6 border border-gray-200">
@@ -290,8 +302,8 @@ const Dashboard = () => {
                   </button>
                 </div>
                 {transactions && transactions.length > 0 ? (
-                  <div className="overflow-x-auto">
-                    <table className="w-full">
+                  <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
+                    <table className="w-full min-w-[600px] md:min-w-0">
                       <thead>
                         <tr className="border-b border-gray-200">
                           <th className="text-left py-3 text-xs font-medium text-gray-500 uppercase">
@@ -384,7 +396,7 @@ const Dashboard = () => {
               </div>
             </div>
 
-            <div className="lg:col-span-2 space-y-4">
+            <div className="md:col-span-2 lg:col-span-2 space-y-4">
               <div className="bg-white rounded-xl p-4 md:p-5 border border-gray-200">
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="text-lg font-bold text-gray-900">Wallet</h2>
@@ -405,7 +417,7 @@ const Dashboard = () => {
                   </button>
                 </div>
                 {wallet && wallet.cards && wallet.cards.length > 0 ? (
-                  <div className="relative">
+                  <div className="relative max-w-full overflow-hidden">
                     {wallet.cards.map((card, index) => {
                       const maskedNumber =
                         index > 0
@@ -528,16 +540,16 @@ const Dashboard = () => {
                     {scheduledTransfers.slice(0, 5).map((transfer) => (
                       <div
                         key={transfer.id}
-                        className="flex items-center justify-between py-3 border-b border-gray-100 last:border-0"
+                        className="flex items-center justify-between gap-2 py-3 border-b border-gray-100 last:border-0"
                       >
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3 min-w-0 flex-1">
                           <img
                             src={transfer.image}
                             alt={transfer.name}
-                            className="w-10 h-10 rounded-full object-cover"
+                            className="w-10 h-10 rounded-full object-cover flex-shrink-0"
                           />
-                          <div>
-                            <div className="text-sm font-medium text-gray-900">
+                          <div className="min-w-0 flex-1">
+                            <div className="text-sm font-medium text-gray-900 truncate">
                               {transfer.name}
                             </div>
                             <div className="text-xs text-gray-500">
@@ -556,7 +568,7 @@ const Dashboard = () => {
                             </div>
                           </div>
                         </div>
-                        <div className="text-sm font-semibold text-gray-900">
+                        <div className="text-sm font-semibold text-gray-900 flex-shrink-0">
                           {transfer.amount < 0 ? "-" : "+"} {transfer.currency}
                           {Math.abs(transfer.amount).toLocaleString("en-US", {
                             minimumFractionDigits: 2,
