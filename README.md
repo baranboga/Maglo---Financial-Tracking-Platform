@@ -4,7 +4,7 @@ Modern and user-friendly financial dashboard application. Manage your income-exp
 
 ## 🌐 Live Demo
 
-**👉 [View Live Demo](https://loquacious-puffpuff-207002.netlify.app/dashboard)**
+**👉 <a href="https://loquacious-puffpuff-207002.netlify.app/dashboard" target="_blank" rel="noopener noreferrer">View Live Demo</a>**
 
 ---
 
