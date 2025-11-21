@@ -1,24 +1,24 @@
-# 💰 Maglo - Finansal Takip Platformu
+# 💰 Maglo - Financial Tracking Platform
 
-Modern ve kullanıcı dostu finansal dashboard uygulaması. Gelir-gider takibi, cüzdan yönetimi ve finansal analizlerinizi tek bir platformda yönetin.
+Modern and user-friendly financial dashboard application. Manage your income-expense tracking, wallet management, and financial analytics all in one platform.
 
 ---
 
-## 📸 Ekran Görüntüleri
+## 📸 Screenshots
 
-### 🏠 Dashboard - Desktop Görünümü
+### 🏠 Dashboard - Desktop View
 
 ![Dashboard](./screenshots/dashboard.png)
 
-### 🔐 Giriş Ekranı
+### 🔐 Sign In Screen
 
 ![Sign In](./screenshots/signIn.png)
 
-### 📝 Kayıt Ekranı
+### 📝 Sign Up Screen
 
 ![Sign Up](./screenshots/signUp.png)
 
-### 📱 Responsive Mobil Görünüm
+### 📱 Responsive Mobile View
 
 <div style="display: flex; gap: 10px;">
   <img src="./screenshots/dashboardResponsive.png" alt="Mobile Dashboard 1" width="45%">
@@ -26,72 +26,72 @@ Modern ve kullanıcı dostu finansal dashboard uygulaması. Gelir-gider takibi, 
 
 ---
 
-## ✨ Özellikler
+## ✨ Features
 
-### 🎯 Temel Özellikler
+### 🎯 Core Features
 
-- 📊 **Finansal Dashboard**: Gelir-gider takibi, toplam bakiye ve tasarruf gösterimi
-- 💳 **Kredi Kartı Yönetimi**: Görsel kart gösterimi, kart detayları ve çoklu kart desteği
-- 📈 **İnteraktif Grafikler**: Working Capital çizgi grafikleri (Recharts)
-- 📋 **İşlem Takibi**: Son işlemler ve planlanmış transferler
-- 🔔 **Bildirim Sistemi**: Gerçek zamanlı toast notifications
-- 📱 **Tam Responsive**: Mobil, tablet ve desktop uyumlu
-- 🔒 **Güvenli Authentication**: JWT tabanlı token sistemi
-- 🛡️ **Error Handling**: Error Boundary ile kapsamlı hata yönetimi
+- 📊 **Financial Dashboard**: Income-expense tracking, total balance and savings display
+- 💳 **Credit Card Management**: Visual card display, card details and multi-card support
+- 📈 **Interactive Charts**: Working Capital line charts (Recharts)
+- 📋 **Transaction Tracking**: Recent transactions and scheduled transfers
+- 🔔 **Notification System**: Real-time toast notifications
+- 📱 **Fully Responsive**: Mobile, tablet and desktop compatible
+- 🔒 **Secure Authentication**: JWT-based token system
+- 🛡️ **Error Handling**: Comprehensive error management with Error Boundary
 
-### 🔥 İleri Seviye Özellikler
+### 🔥 Advanced Features
 
-- ⚡ **Optimized Performance**: React Query ile cache yönetimi
-- 🎨 **Modern UI/UX**: Tailwind CSS ile pixel-perfect tasarım
-- 🔄 **Real-time Validation**: Form validasyonu ve görsel feedback
-- 📊 **Data Visualization**: Tooltip, hover effects ve animasyonlar
-- 🌐 **Çoklu Para Birimi**: TRY, USD, EUR desteği
-- 📅 **Tarih Formatlama**: Uluslararası format desteği
-- 🔐 **Protected Routes**: Otomatik yönlendirme ve auth guard
-- 💾 **Persistent State**: LocalStorage ile oturum yönetimi
+- ⚡ **Optimized Performance**: Cache management with React Query
+- 🎨 **Modern UI/UX**: Pixel-perfect design with Tailwind CSS
+- 🔄 **Real-time Validation**: Form validation and visual feedback
+- 📊 **Data Visualization**: Tooltips, hover effects and animations
+- 🌐 **Multi-Currency Support**: TRY, USD, EUR support
+- 📅 **Date Formatting**: International format support
+- 🔐 **Protected Routes**: Automatic redirection and auth guard
+- 💾 **Persistent State**: Session management with LocalStorage
 
 ---
 
-## 🚀 Kurulum ve Çalıştırma
+## 🚀 Installation and Running
 
-### Gereksinimler
+### Requirements
 
 - Node.js 18+
-- npm veya yarn
+- npm or yarn
 
-### Kurulum Adımları
+### Installation Steps
 
 ```bash
-# Projeyi klonlayın
+# Clone the project
 git clone https://github.com/yourusername/maglo.git
 
-# Proje dizinine gidin
+# Navigate to project directory
 cd maglo
 
-# Bağımlılıkları yükleyin
+# Install dependencies
 npm install
 
-# Geliştirme sunucusunu başlatın
+# Start development server
 npm run dev
 ```
 
-Uygulama `http://localhost:5173` adresinde çalışacaktır.
+The application will run at `http://localhost:5173`.
 
 ### Production Build
 
 ```bash
-# Production build oluşturun
+# Create production build
 npm run build
 
-# Build'i önizleyin
+# Preview production build
 npm run preview
 ```
 
 ---
 
-## 🛠️ Teknolojiler
+## 🛠️ Technologies
 
-| Kategori               | Teknolojiler         | Açıklama                           |
+| Category               | Technologies         | Description                        |
 | ---------------------- | -------------------- | ---------------------------------- |
 | **Frontend Framework** | React 18             | Modern UI library                  |
 | **Language**           | TypeScript 5.0       | Type-safe JavaScript               |
@@ -109,117 +109,117 @@ npm run preview
 
 ---
 
-## 🎯 Teknoloji Seçimleri ve Nedenleri
+## 🎯 Technology Choices and Reasons
 
-### **React 18 (Next.js Yerine)**
+### **React 18 (Instead of Next.js)**
 
-- ✅ **Client-Side Rendering**: Bu proje için yeterli, SSR/SSG gereksinimi yok
-- ✅ **Daha Hafif**: Next.js'e göre daha küçük bundle size, gereksiz özellikler yok
-- ✅ **Basit Yapı**: SPA (Single Page Application) için ideal, routing React Router ile yeterli
-- ✅ **Hızlı Geliştirme**: Vite ile anında HMR, Next.js'e göre daha hızlı dev server
-- ✅ **Esneklik**: Build tool seçimi (Vite) tamamen kontrolümüzde
-- ✅ **Modern ve Stabil**: En güncel React sürümü, Concurrent Features desteği
-- ✅ **Büyük Topluluk**: Geniş ekosistem ve kaynak desteği
-- ✅ **Performans**: Automatic batching ve Suspense ile optimize edilmiş render
-- ✅ **Case Uyumu**: Dashboard uygulaması için SSR/SSG gerekmiyor, CSR yeterli
-- ❌ **Next.js Alternatifi**: Next.js SSR/SSG, API routes, Image optimization gibi özellikler sunuyor ama bu proje için gereksiz karmaşıklık
+- ✅ **Client-Side Rendering**: Sufficient for this project, no SSR/SSG requirement
+- ✅ **Lighter**: Smaller bundle size compared to Next.js, no unnecessary features
+- ✅ **Simple Structure**: Ideal for SPA (Single Page Application), React Router is sufficient for routing
+- ✅ **Fast Development**: Instant HMR with Vite, faster dev server compared to Next.js
+- ✅ **Flexibility**: Build tool choice (Vite) is completely under our control
+- ✅ **Modern and Stable**: Latest React version with Concurrent Features support
+- ✅ **Large Community**: Extensive ecosystem and resource support
+- ✅ **Performance**: Optimized rendering with Automatic batching and Suspense
+- ✅ **Case Compatibility**: SSR/SSG not needed for dashboard application, CSR is sufficient
+- ❌ **Next.js Alternative**: Next.js offers SSR/SSG, API routes, Image optimization features but adds unnecessary complexity for this project
 
 ### **TypeScript 5.0**
 
-- ✅ **Type Safety**: Compile-time hata yakalama, daha az runtime hatası
-- ✅ **Developer Experience**: IntelliSense, otomatik tamamlama, refactoring desteği
-- ✅ **Kod Kalitesi**: Self-documenting kod, interface'ler ile API kontratları
-- ✅ **Büyük Projeler**: Ölçeklenebilir kod yapısı için ideal
+- ✅ **Type Safety**: Compile-time error catching, fewer runtime errors
+- ✅ **Developer Experience**: IntelliSense, auto-completion, refactoring support
+- ✅ **Code Quality**: Self-documenting code, API contracts with interfaces
+- ✅ **Large Projects**: Ideal for scalable code structure
 
 ### **Vite**
 
-- ✅ **Hız**: Webpack'e göre 10-100x daha hızlı HMR (Hot Module Replacement)
-- ✅ **Modern Build**: ES modules kullanımı, optimize edilmiş production build
-- ✅ **Zero Config**: Minimal konfigürasyon ile çalışır
-- ✅ **Developer Experience**: Anında server başlatma, hızlı rebuild
+- ✅ **Speed**: 10-100x faster HMR (Hot Module Replacement) compared to Webpack
+- ✅ **Modern Build**: ES modules usage, optimized production build
+- ✅ **Zero Config**: Works with minimal configuration
+- ✅ **Developer Experience**: Instant server startup, fast rebuild
 
 ### **Tailwind CSS 3.0**
 
-- ✅ **Utility-First**: Hızlı UI geliştirme, inline styling yaklaşımı
-- ✅ **Responsive**: Built-in breakpoint desteği (`sm:`, `md:`, `lg:`)
-- ✅ **Customizable**: `tailwind.config.js` ile kolay özelleştirme
-- ✅ **Production Optimized**: Kullanılmayan CSS'leri otomatik temizler (purge)
-- ✅ **Pixel-Perfect**: Tasarım dosyasına birebir uyum için ideal
-- ❌ **Alternatifler**: CSS Modules (daha fazla dosya), styled-components (runtime overhead)
+- ✅ **Utility-First**: Fast UI development, inline styling approach
+- ✅ **Responsive**: Built-in breakpoint support (`sm:`, `md:`, `lg:`)
+- ✅ **Customizable**: Easy customization with `tailwind.config.js`
+- ✅ **Production Optimized**: Automatically removes unused CSS (purge)
+- ✅ **Pixel-Perfect**: Ideal for exact design file matching
+- ❌ **Alternatives**: CSS Modules (more files), styled-components (runtime overhead)
 
 ### **Zustand**
 
-- ✅ **Minimal Boilerplate**: Redux'a göre çok daha az kod
-- ✅ **Hafif**: ~1KB bundle size, Redux Toolkit'e göre çok küçük
-- ✅ **Basit API**: `useStore` hook ile kolay kullanım
-- ✅ **Persist Middleware**: LocalStorage entegrasyonu built-in
-- ✅ **TypeScript Desteği**: Mükemmel TS desteği
-- ❌ **Alternatifler**: Redux (çok fazla boilerplate), Context API (performance sorunları)
+- ✅ **Minimal Boilerplate**: Much less code compared to Redux
+- ✅ **Lightweight**: ~1KB bundle size, very small compared to Redux Toolkit
+- ✅ **Simple API**: Easy usage with `useStore` hook
+- ✅ **Persist Middleware**: Built-in LocalStorage integration
+- ✅ **TypeScript Support**: Excellent TS support
+- ❌ **Alternatives**: Redux (too much boilerplate), Context API (performance issues)
 
 ### **TanStack React Query**
 
-- ✅ **Server State Management**: API verilerini otomatik cache'ler
-- ✅ **Loading/Error States**: Built-in loading ve error yönetimi
-- ✅ **Auto Refetching**: Window focus, network reconnect'te otomatik yenileme
-- ✅ **Optimistic Updates**: Kullanıcı deneyimini artırır
-- ✅ **DevTools**: React Query DevTools ile debugging kolaylığı
-- ❌ **Alternatifler**: SWR (benzer ama daha az özellik), fetch + useState (manuel yönetim gerekir)
+- ✅ **Server State Management**: Automatically caches API data
+- ✅ **Loading/Error States**: Built-in loading and error management
+- ✅ **Auto Refetching**: Automatic refresh on window focus, network reconnect
+- ✅ **Optimistic Updates**: Enhances user experience
+- ✅ **DevTools**: Easy debugging with React Query DevTools
+- ❌ **Alternatives**: SWR (similar but fewer features), fetch + useState (requires manual management)
 
 ### **React Hook Form**
 
-- ✅ **Performans**: Uncontrolled components ile minimum re-render
-- ✅ **Küçük Bundle**: ~9KB, Formik'e göre çok daha küçük
-- ✅ **Validation Integration**: Zod ile mükemmel entegrasyon
-- ✅ **Developer Experience**: `register`, `handleSubmit` ile basit API
-- ❌ **Alternatifler**: Formik (daha büyük bundle, daha fazla re-render)
+- ✅ **Performance**: Minimum re-render with uncontrolled components
+- ✅ **Small Bundle**: ~9KB, much smaller than Formik
+- ✅ **Validation Integration**: Perfect integration with Zod
+- ✅ **Developer Experience**: Simple API with `register`, `handleSubmit`
+- ❌ **Alternatives**: Formik (larger bundle, more re-renders)
 
 ### **Zod**
 
-- ✅ **TypeScript-First**: Schema'dan otomatik type inference
-- ✅ **Runtime Validation**: TypeScript compile-time'dan öte runtime kontrolü
-- ✅ **React Hook Form Integration**: `zodResolver` ile seamless entegrasyon
-- ✅ **Güçlü Validasyon**: Email, password strength, custom validators
-- ❌ **Alternatifler**: Yup (daha eski, daha az TypeScript desteği), Joi (Node.js odaklı)
+- ✅ **TypeScript-First**: Automatic type inference from schema
+- ✅ **Runtime Validation**: Runtime control beyond TypeScript compile-time
+- ✅ **React Hook Form Integration**: Seamless integration with `zodResolver`
+- ✅ **Strong Validation**: Email, password strength, custom validators
+- ❌ **Alternatives**: Yup (older, less TypeScript support), Joi (Node.js focused)
 
 ### **Recharts**
 
-- ✅ **React Native**: React component'leri olarak grafikler
-- ✅ **Composable**: `LineChart`, `Line`, `XAxis` gibi modüler yapı
-- ✅ **Customizable**: Tooltip, legend, colors tamamen özelleştirilebilir
-- ✅ **Responsive**: `ResponsiveContainer` ile otomatik responsive
-- ✅ **D3.js Based**: Güçlü D3.js altyapısı üzerine kurulu
-- ❌ **Alternatifler**: Chart.js (React wrapper gerekir), Victory (daha büyük bundle)
+- ✅ **React Native**: Charts as React components
+- ✅ **Composable**: Modular structure like `LineChart`, `Line`, `XAxis`
+- ✅ **Customizable**: Tooltip, legend, colors fully customizable
+- ✅ **Responsive**: Automatic responsive with `ResponsiveContainer`
+- ✅ **D3.js Based**: Built on powerful D3.js infrastructure
+- ❌ **Alternatives**: Chart.js (requires React wrapper), Victory (larger bundle)
 
 ### **React Hot Toast**
 
-- ✅ **Hafif**: ~5KB bundle size, React Toastify'e göre daha küçük
-- ✅ **Modern API**: Hook-based kullanım (`toast.success()`, `toast.error()`)
-- ✅ **Customizable**: Position, duration, styling tamamen özelleştirilebilir
-- ✅ **Accessible**: ARIA attributes ile erişilebilirlik desteği
-- ✅ **Zero Config**: Minimal setup ile çalışır
-- ❌ **Alternatifler**: React Toastify (daha büyük bundle), react-toast-notifications (daha az özellik)
+- ✅ **Lightweight**: ~5KB bundle size, smaller than React Toastify
+- ✅ **Modern API**: Hook-based usage (`toast.success()`, `toast.error()`)
+- ✅ **Customizable**: Position, duration, styling fully customizable
+- ✅ **Accessible**: Accessibility support with ARIA attributes
+- ✅ **Zero Config**: Works with minimal setup
+- ❌ **Alternatives**: React Toastify (larger bundle), react-toast-notifications (fewer features)
 
 ### **Axios**
 
-- ✅ **Interceptors**: Request/response interceptors ile merkezi hata yönetimi
-- ✅ **Request Cancellation**: AbortController desteği
-- ✅ **Automatic JSON**: Response'ları otomatik parse eder
-- ✅ **Browser & Node**: Hem browser hem Node.js'de çalışır
-- ✅ **TypeScript**: Mükemmel TS desteği
-- ❌ **Alternatifler**: Fetch API (daha az özellik, manuel interceptor yazmak gerekir)
+- ✅ **Interceptors**: Centralized error management with request/response interceptors
+- ✅ **Request Cancellation**: AbortController support
+- ✅ **Automatic JSON**: Automatically parses responses
+- ✅ **Browser & Node**: Works in both browser and Node.js
+- ✅ **TypeScript**: Excellent TS support
+- ❌ **Alternatives**: Fetch API (fewer features, need to write manual interceptors)
 
 ### **date-fns**
 
-- ✅ **Modular**: Sadece kullanılan fonksiyonlar bundle'a eklenir
-- ✅ **Immutable**: Moment.js'ten farklı olarak immutable
-- ✅ **Tree-Shakeable**: Modern bundler'lar ile optimize edilebilir
-- ✅ **Locale Support**: Türkçe locale desteği (`tr` locale)
-- ✅ **TypeScript**: Full TypeScript desteği
-- ❌ **Alternatifler**: Moment.js (deprecated, büyük bundle), Day.js (daha az özellik)
+- ✅ **Modular**: Only used functions are added to bundle
+- ✅ **Immutable**: Immutable unlike Moment.js
+- ✅ **Tree-Shakeable**: Optimizable with modern bundlers
+- ✅ **Locale Support**: Turkish locale support (`tr` locale)
+- ✅ **TypeScript**: Full TypeScript support
+- ❌ **Alternatives**: Moment.js (deprecated, large bundle), Day.js (fewer features)
 
 ---
 
-## 📁 Proje Yapısı
+## 📁 Project Structure
 
 ```
 maglo/
@@ -271,20 +271,18 @@ maglo/
 └── vite.config.ts
 ```
 
-                   |
+### 🎨 UI/UX Details
 
-### 🎨 UI/UX Detayları
-
-- **Animations**: Smooth transitions ve hover effects
+- **Animations**: Smooth transitions and hover effects
 - **Loading States**: Skeleton shimmer effects
-- **Error States**: Toast notifications ve error boundary
-- **Form Feedback**: Real-time validation, görsel hata gösterimi
+- **Error States**: Toast notifications and error boundary
+- **Form Feedback**: Real-time validation, visual error display
 - **Responsive Design**: Mobile-first approach
-- **Dark Mode Cards**: Kontrast kartlar
-- **Icons**: Modern ikon seti
-- **Typography**: Okunabilir font hierarchy
+- **Dark Mode Cards**: Contrast cards
+- **Icons**: Modern icon set
+- **Typography**: Readable font hierarchy
 
-### 📱 Responsive Tasarım
+### 📱 Responsive Design
 
 #### Desktop (1024px+)
 
@@ -303,12 +301,12 @@ maglo/
 
 - Hamburger menu
 - Single column layout
-- Bottom navigation (opsiyonel)
+- Bottom navigation (optional)
 - Touch-optimized buttons
 
 ---
 
-## 🔧 Geliştirme
+## 🔧 Development
 
 ### Available Scripts
 
@@ -328,7 +326,7 @@ npm run lint
 
 ### Environment Variables
 
-API proxy ayarları `vite.config.ts` içinde yapılmıştır:
+API proxy settings are configured in `vite.config.ts`:
 
 ```typescript
 server: {
@@ -346,41 +344,43 @@ server: {
 
 - ESLint + TypeScript rules
 - Prettier formatting
-- Modular component yapısı
+- Modular component structure
 - Clean code principles
 
 ---
 
 ## 🛡️ Error Handling
 
-### Kapsamlı Hata Yönetimi
+### Comprehensive Error Management
 
-1. **Error Boundary**: Component render hatalarını yakalar
-2. **Axios Interceptors**: API hata yönetimi ve 401 handling
-3. **React Query**: Network hatalarını yönetir
-4. **Form Validation**: Zod ile güçlü validasyon
-5. **Toast Notifications**: Kullanıcıya anlamlı hata mesajları
+1. **Error Boundary**: Catches component render errors
+2. **Axios Interceptors**: API error management and 401 handling
+3. **React Query**: Manages network errors
+4. **Form Validation**: Strong validation with Zod
+5. **Toast Notifications**: Meaningful error messages to users
 
-### Error Boundary Özellikleri
+### Error Boundary Features
 
-- Fallback UI ile zarif hata gösterimi
-- Development mode'da detaylı error stack
-- "Try Again" ve "Go Home" aksiyonları
+- Elegant error display with fallback UI
+- Detailed error stack in development mode
+- "Try Again" and "Go Home" actions
 - Console logging
-
-## 👨‍💻 Geliştirici
-
-**Baran Boga**  
-📅 Kasım 2025
 
 ---
 
-## 🙏 Teşekkürler
+## 👨‍💻 Developer
 
-Bu proje, modern React ekosisteminin en iyi pratiklerini göstermek için geliştirilmiştir.
+**Baran Boga**  
+📅 November 2025
+
+---
+
+## 🙏 Acknowledgments
+
+This project was developed to showcase the best practices of the modern React ecosystem.
 
 ---
 
 <div align="center">
-  <strong>⭐ Projeyi beğendiyseniz yıldız vermeyi unutmayın!</strong>
+  <strong>⭐ If you liked the project, don't forget to give it a star!</strong>
 </div>
