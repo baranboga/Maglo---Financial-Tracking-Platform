@@ -111,12 +111,18 @@ npm run preview
 
 ## 🎯 Teknoloji Seçimleri ve Nedenleri
 
-### **React 18**
+### **React 18 (Next.js Yerine)**
 
+- ✅ **Client-Side Rendering**: Bu proje için yeterli, SSR/SSG gereksinimi yok
+- ✅ **Daha Hafif**: Next.js'e göre daha küçük bundle size, gereksiz özellikler yok
+- ✅ **Basit Yapı**: SPA (Single Page Application) için ideal, routing React Router ile yeterli
+- ✅ **Hızlı Geliştirme**: Vite ile anında HMR, Next.js'e göre daha hızlı dev server
+- ✅ **Esneklik**: Build tool seçimi (Vite) tamamen kontrolümüzde
 - ✅ **Modern ve Stabil**: En güncel React sürümü, Concurrent Features desteği
 - ✅ **Büyük Topluluk**: Geniş ekosistem ve kaynak desteği
 - ✅ **Performans**: Automatic batching ve Suspense ile optimize edilmiş render
-- ✅ **Case Uyumu**: Modern frontend geliştirme standartlarına uygun
+- ✅ **Case Uyumu**: Dashboard uygulaması için SSR/SSG gerekmiyor, CSR yeterli
+- ❌ **Next.js Alternatifi**: Next.js SSR/SSG, API routes, Image optimization gibi özellikler sunuyor ama bu proje için gereksiz karmaşıklık
 
 ### **TypeScript 5.0**
 
