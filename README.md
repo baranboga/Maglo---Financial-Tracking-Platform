@@ -109,6 +109,98 @@ npm run preview
 
 ---
 
+## 🎯 Teknoloji Seçimleri ve Nedenleri
+
+### **React 18**
+- ✅ **Modern ve Stabil**: En güncel React sürümü, Concurrent Features desteği
+- ✅ **Büyük Topluluk**: Geniş ekosistem ve kaynak desteği
+- ✅ **Performans**: Automatic batching ve Suspense ile optimize edilmiş render
+- ✅ **Case Uyumu**: Modern frontend geliştirme standartlarına uygun
+
+### **TypeScript 5.0**
+- ✅ **Type Safety**: Compile-time hata yakalama, daha az runtime hatası
+- ✅ **Developer Experience**: IntelliSense, otomatik tamamlama, refactoring desteği
+- ✅ **Kod Kalitesi**: Self-documenting kod, interface'ler ile API kontratları
+- ✅ **Büyük Projeler**: Ölçeklenebilir kod yapısı için ideal
+
+### **Vite**
+- ✅ **Hız**: Webpack'e göre 10-100x daha hızlı HMR (Hot Module Replacement)
+- ✅ **Modern Build**: ES modules kullanımı, optimize edilmiş production build
+- ✅ **Zero Config**: Minimal konfigürasyon ile çalışır
+- ✅ **Developer Experience**: Anında server başlatma, hızlı rebuild
+
+### **Tailwind CSS 3.0**
+- ✅ **Utility-First**: Hızlı UI geliştirme, inline styling yaklaşımı
+- ✅ **Responsive**: Built-in breakpoint desteği (`sm:`, `md:`, `lg:`)
+- ✅ **Customizable**: `tailwind.config.js` ile kolay özelleştirme
+- ✅ **Production Optimized**: Kullanılmayan CSS'leri otomatik temizler (purge)
+- ✅ **Pixel-Perfect**: Tasarım dosyasına birebir uyum için ideal
+- ❌ **Alternatifler**: CSS Modules (daha fazla dosya), styled-components (runtime overhead)
+
+### **Zustand**
+- ✅ **Minimal Boilerplate**: Redux'a göre çok daha az kod
+- ✅ **Hafif**: ~1KB bundle size, Redux Toolkit'e göre çok küçük
+- ✅ **Basit API**: `useStore` hook ile kolay kullanım
+- ✅ **Persist Middleware**: LocalStorage entegrasyonu built-in
+- ✅ **TypeScript Desteği**: Mükemmel TS desteği
+- ❌ **Alternatifler**: Redux (çok fazla boilerplate), Context API (performance sorunları)
+
+### **TanStack React Query**
+- ✅ **Server State Management**: API verilerini otomatik cache'ler
+- ✅ **Loading/Error States**: Built-in loading ve error yönetimi
+- ✅ **Auto Refetching**: Window focus, network reconnect'te otomatik yenileme
+- ✅ **Optimistic Updates**: Kullanıcı deneyimini artırır
+- ✅ **DevTools**: React Query DevTools ile debugging kolaylığı
+- ❌ **Alternatifler**: SWR (benzer ama daha az özellik), fetch + useState (manuel yönetim gerekir)
+
+### **React Hook Form**
+- ✅ **Performans**: Uncontrolled components ile minimum re-render
+- ✅ **Küçük Bundle**: ~9KB, Formik'e göre çok daha küçük
+- ✅ **Validation Integration**: Zod ile mükemmel entegrasyon
+- ✅ **Developer Experience**: `register`, `handleSubmit` ile basit API
+- ❌ **Alternatifler**: Formik (daha büyük bundle, daha fazla re-render)
+
+### **Zod**
+- ✅ **TypeScript-First**: Schema'dan otomatik type inference
+- ✅ **Runtime Validation**: TypeScript compile-time'dan öte runtime kontrolü
+- ✅ **React Hook Form Integration**: `zodResolver` ile seamless entegrasyon
+- ✅ **Güçlü Validasyon**: Email, password strength, custom validators
+- ❌ **Alternatifler**: Yup (daha eski, daha az TypeScript desteği), Joi (Node.js odaklı)
+
+### **Recharts**
+- ✅ **React Native**: React component'leri olarak grafikler
+- ✅ **Composable**: `LineChart`, `Line`, `XAxis` gibi modüler yapı
+- ✅ **Customizable**: Tooltip, legend, colors tamamen özelleştirilebilir
+- ✅ **Responsive**: `ResponsiveContainer` ile otomatik responsive
+- ✅ **D3.js Based**: Güçlü D3.js altyapısı üzerine kurulu
+- ❌ **Alternatifler**: Chart.js (React wrapper gerekir), Victory (daha büyük bundle)
+
+### **React Hot Toast**
+- ✅ **Hafif**: ~5KB bundle size, React Toastify'e göre daha küçük
+- ✅ **Modern API**: Hook-based kullanım (`toast.success()`, `toast.error()`)
+- ✅ **Customizable**: Position, duration, styling tamamen özelleştirilebilir
+- ✅ **Accessible**: ARIA attributes ile erişilebilirlik desteği
+- ✅ **Zero Config**: Minimal setup ile çalışır
+- ❌ **Alternatifler**: React Toastify (daha büyük bundle), react-toast-notifications (daha az özellik)
+
+### **Axios**
+- ✅ **Interceptors**: Request/response interceptors ile merkezi hata yönetimi
+- ✅ **Request Cancellation**: AbortController desteği
+- ✅ **Automatic JSON**: Response'ları otomatik parse eder
+- ✅ **Browser & Node**: Hem browser hem Node.js'de çalışır
+- ✅ **TypeScript**: Mükemmel TS desteği
+- ❌ **Alternatifler**: Fetch API (daha az özellik, manuel interceptor yazmak gerekir)
+
+### **date-fns**
+- ✅ **Modular**: Sadece kullanılan fonksiyonlar bundle'a eklenir
+- ✅ **Immutable**: Moment.js'ten farklı olarak immutable
+- ✅ **Tree-Shakeable**: Modern bundler'lar ile optimize edilebilir
+- ✅ **Locale Support**: Türkçe locale desteği (`tr` locale)
+- ✅ **TypeScript**: Full TypeScript desteği
+- ❌ **Alternatifler**: Moment.js (deprecated, büyük bundle), Day.js (daha az özellik)
+
+---
+
 ## 📁 Proje Yapısı
 
 ```
