@@ -22,7 +22,6 @@ Modern ve kullanıcı dostu finansal dashboard uygulaması. Gelir-gider takibi, 
 
 <div style="display: flex; gap: 10px;">
   <img src="./screenshots/dashboardResponsive.png" alt="Mobile Dashboard 1" width="45%">
-  <img src="./screenshots/dashboardResponsive2.png" alt="Mobile Dashboard 2" width="45%">
 </div>
 
 ---
