@@ -72,13 +72,33 @@ const Dashboard = () => {
         <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
         <div className="flex-1 flex flex-col">
           <Header onMenuClick={() => setSidebarOpen(true)} />
-          <div className="flex-1 p-8">
-            <div className="animate-pulse space-y-6">
-              <div className="h-8 bg-gray-200 rounded w-48"></div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="h-32 bg-gray-200 rounded-lg"></div>
-                ))}
+          <div className="flex-1 p-4 md:p-8">
+            <div className="space-y-6">
+              {/* Title Skeleton */}
+              <div className="h-8 shimmer rounded w-48"></div>
+              
+              {/* Summary Cards Skeleton */}
+              <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+                <div className="lg:col-span-3 grid grid-cols-1 lg:grid-cols-3 gap-4">
+                  {[1, 2, 3].map((i) => (
+                    <div key={i} className="h-[85px] shimmer rounded-xl"></div>
+                  ))}
+                </div>
+                <div className="lg:col-span-1">
+                  <div className="h-[85px] shimmer rounded-xl"></div>
+                </div>
+              </div>
+
+              {/* Chart and Tables Skeleton */}
+              <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+                <div className="lg:col-span-3 space-y-4">
+                  <div className="h-[400px] shimmer rounded-xl"></div>
+                  <div className="h-[300px] shimmer rounded-xl"></div>
+                </div>
+                <div className="lg:col-span-1 space-y-4">
+                  <div className="h-[200px] shimmer rounded-xl"></div>
+                  <div className="h-[300px] shimmer rounded-xl"></div>
+                </div>
               </div>
             </div>
           </div>
