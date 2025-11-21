@@ -109,113 +109,31 @@ npm run preview
 
 ---
 
-## 🎯 Technology Choices and Reasons
+## 🎯 Technology Choices
 
-### **React 18 (Instead of Next.js)**
+**React 18** - Chosen over Next.js because this dashboard doesn't need SSR/SSG. Client-side rendering is sufficient and keeps the bundle smaller.
 
-- ✅ **Client-Side Rendering**: Sufficient for this project, no SSR/SSG requirement
-- ✅ **Lighter**: Smaller bundle size compared to Next.js, no unnecessary features
-- ✅ **Simple Structure**: Ideal for SPA (Single Page Application), React Router is sufficient for routing
-- ✅ **Fast Development**: Instant HMR with Vite, faster dev server compared to Next.js
-- ✅ **Flexibility**: Build tool choice (Vite) is completely under our control
-- ✅ **Modern and Stable**: Latest React version with Concurrent Features support
-- ✅ **Large Community**: Extensive ecosystem and resource support
-- ✅ **Performance**: Optimized rendering with Automatic batching and Suspense
-- ✅ **Case Compatibility**: SSR/SSG not needed for dashboard application, CSR is sufficient
-- ❌ **Next.js Alternative**: Next.js offers SSR/SSG, API routes, Image optimization features but adds unnecessary complexity for this project
+**TypeScript** - Type safety and better developer experience.
 
-### **TypeScript 5.0**
+**Vite** - Much faster than Webpack, especially for HMR.
 
-- ✅ **Type Safety**: Compile-time error catching, fewer runtime errors
-- ✅ **Developer Experience**: IntelliSense, auto-completion, refactoring support
-- ✅ **Code Quality**: Self-documenting code, API contracts with interfaces
-- ✅ **Large Projects**: Ideal for scalable code structure
+**Tailwind CSS** - Fast development with utility classes, perfect for pixel-perfect designs.
 
-### **Vite**
+**Zustand** - Simple state management with minimal boilerplate compared to Redux.
 
-- ✅ **Speed**: 10-100x faster HMR (Hot Module Replacement) compared to Webpack
-- ✅ **Modern Build**: ES modules usage, optimized production build
-- ✅ **Zero Config**: Works with minimal configuration
-- ✅ **Developer Experience**: Instant server startup, fast rebuild
+**TanStack React Query** - Handles API caching, loading states, and error management automatically.
 
-### **Tailwind CSS 3.0**
+**React Hook Form** - Better performance than Formik, works great with Zod.
 
-- ✅ **Utility-First**: Fast UI development, inline styling approach
-- ✅ **Responsive**: Built-in breakpoint support (`sm:`, `md:`, `lg:`)
-- ✅ **Customizable**: Easy customization with `tailwind.config.js`
-- ✅ **Production Optimized**: Automatically removes unused CSS (purge)
-- ✅ **Pixel-Perfect**: Ideal for exact design file matching
-- ❌ **Alternatives**: CSS Modules (more files), styled-components (runtime overhead)
+**Zod** - TypeScript-first validation that integrates seamlessly with React Hook Form.
 
-### **Zustand**
+**Recharts** - React-friendly charting library built on D3.js.
 
-- ✅ **Minimal Boilerplate**: Much less code compared to Redux
-- ✅ **Lightweight**: ~1KB bundle size, very small compared to Redux Toolkit
-- ✅ **Simple API**: Easy usage with `useStore` hook
-- ✅ **Persist Middleware**: Built-in LocalStorage integration
-- ✅ **TypeScript Support**: Excellent TS support
-- ❌ **Alternatives**: Redux (too much boilerplate), Context API (performance issues)
+**React Hot Toast** - Lightweight toast notifications.
 
-### **TanStack React Query**
+**Axios** - Interceptors make error handling easier than fetch API.
 
-- ✅ **Server State Management**: Automatically caches API data
-- ✅ **Loading/Error States**: Built-in loading and error management
-- ✅ **Auto Refetching**: Automatic refresh on window focus, network reconnect
-- ✅ **Optimistic Updates**: Enhances user experience
-- ✅ **DevTools**: Easy debugging with React Query DevTools
-- ❌ **Alternatives**: SWR (similar but fewer features), fetch + useState (requires manual management)
-
-### **React Hook Form**
-
-- ✅ **Performance**: Minimum re-render with uncontrolled components
-- ✅ **Small Bundle**: ~9KB, much smaller than Formik
-- ✅ **Validation Integration**: Perfect integration with Zod
-- ✅ **Developer Experience**: Simple API with `register`, `handleSubmit`
-- ❌ **Alternatives**: Formik (larger bundle, more re-renders)
-
-### **Zod**
-
-- ✅ **TypeScript-First**: Automatic type inference from schema
-- ✅ **Runtime Validation**: Runtime control beyond TypeScript compile-time
-- ✅ **React Hook Form Integration**: Seamless integration with `zodResolver`
-- ✅ **Strong Validation**: Email, password strength, custom validators
-- ❌ **Alternatives**: Yup (older, less TypeScript support), Joi (Node.js focused)
-
-### **Recharts**
-
-- ✅ **React Native**: Charts as React components
-- ✅ **Composable**: Modular structure like `LineChart`, `Line`, `XAxis`
-- ✅ **Customizable**: Tooltip, legend, colors fully customizable
-- ✅ **Responsive**: Automatic responsive with `ResponsiveContainer`
-- ✅ **D3.js Based**: Built on powerful D3.js infrastructure
-- ❌ **Alternatives**: Chart.js (requires React wrapper), Victory (larger bundle)
-
-### **React Hot Toast**
-
-- ✅ **Lightweight**: ~5KB bundle size, smaller than React Toastify
-- ✅ **Modern API**: Hook-based usage (`toast.success()`, `toast.error()`)
-- ✅ **Customizable**: Position, duration, styling fully customizable
-- ✅ **Accessible**: Accessibility support with ARIA attributes
-- ✅ **Zero Config**: Works with minimal setup
-- ❌ **Alternatives**: React Toastify (larger bundle), react-toast-notifications (fewer features)
-
-### **Axios**
-
-- ✅ **Interceptors**: Centralized error management with request/response interceptors
-- ✅ **Request Cancellation**: AbortController support
-- ✅ **Automatic JSON**: Automatically parses responses
-- ✅ **Browser & Node**: Works in both browser and Node.js
-- ✅ **TypeScript**: Excellent TS support
-- ❌ **Alternatives**: Fetch API (fewer features, need to write manual interceptors)
-
-### **date-fns**
-
-- ✅ **Modular**: Only used functions are added to bundle
-- ✅ **Immutable**: Immutable unlike Moment.js
-- ✅ **Tree-Shakeable**: Optimizable with modern bundlers
-- ✅ **Locale Support**: Turkish locale support (`tr` locale)
-- ✅ **TypeScript**: Full TypeScript support
-- ❌ **Alternatives**: Moment.js (deprecated, large bundle), Day.js (fewer features)
+**date-fns** - Modern date library, smaller than Moment.js.
 
 ---
 
