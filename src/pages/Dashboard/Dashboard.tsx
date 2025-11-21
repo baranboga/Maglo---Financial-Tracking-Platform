@@ -400,7 +400,9 @@ const Dashboard = () => {
                         <div
                           key={card.id}
                           className={`rounded-xl p-5 relative overflow-hidden ${
-                            index > 0 ? "-mt-12 ml-6 opacity-80" : "opacity-90"
+                            index > 0
+                              ? "-mt-12 left-1/2 -translate-x-1/2 opacity-80"
+                              : "opacity-90"
                           }`}
                           style={{
                             background:
@@ -408,6 +410,7 @@ const Dashboard = () => {
                                 ? "linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2d2d2d 100%)"
                                 : "#f3f4f6",
                             color: index === 0 ? "#ffffff" : "#374151",
+                            width: index > 0 ? "92%" : "100%",
                           }}
                         >
                           <div className="flex items-start justify-between mb-6">
